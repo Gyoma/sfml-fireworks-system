@@ -197,7 +197,7 @@ int main()
 
 
 		Time elapsed = clock.restart();
-		particles.update(elapsed);
+		FS.update(elapsed);
 
 		window.clear();
 		window.draw(FS);
