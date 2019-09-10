@@ -176,9 +176,9 @@ private:
 
 int main()
 {
-	RenderWindow window(VideoMode(1200, 700), "Particles");
+	RenderWindow window(VideoMode(1200, 700), "Fireworks");
 
-	FireworksSystem particles;
+	FireworksSystem FS;
 
 	Clock clock;
 
@@ -192,7 +192,7 @@ int main()
 			if (event.type == Event::Closed)
 				window.close();
 			if (event.type == Event::MouseButtonPressed)
-				particles.launchFirework(window);
+				FS.launchFirework(window);
 		}
 
 
@@ -200,7 +200,7 @@ int main()
 		particles.update(elapsed);
 
 		window.clear();
-		window.draw(particles);
+		window.draw(FS);
 		window.display();
 	}
 
